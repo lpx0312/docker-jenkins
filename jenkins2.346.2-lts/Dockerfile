@@ -22,7 +22,7 @@ RUN apt-get update  \
         && apt-get install -y --no-install-recommends python3.9 python3.9-dev python3.9-venv \
         && ln -s /usr/bin/python3.9 /usr/local/bin/python3  \
         && ln -s /usr/bin/python3.9 /usr/local/bin/python  \
-        && curl -s http://mirrors.lpx.com/soft/python/pip/get-pip3.py -o get-pip.py \
+        && curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py \
         && python3 get-pip.py  \
         && rm -f get-pip.py
 RUN echo root:root | chpasswd
